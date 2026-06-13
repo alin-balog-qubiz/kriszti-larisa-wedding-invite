@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="ro-RO" data-lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Invitația digitală pentru nunta lui Krisztian și Larisa - 26 septembrie 2026">
+    <meta name="theme-color" content="#8B9B5F">
+    
+    <title>Krisztian & Larisa - Invitație de Nuntă</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Playwrite+GB+J:ital,wght@0,100..400;1,100..400&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="src/styles.css">
+</head>
+<body>
+    <!-- Header with language toggle -->
+    <header class="header">
+        <button class="lang-toggle" aria-label="Switch language" title="Schimbă limba">RO</button>
+    </header>
+
+    <!-- Main content -->
+    <main id="main">
+        
+        <!-- ===================== HERO SECTION ===================== -->
+        <section class="hero" aria-label="Wedding hero section">
+            <div class="hero__background"></div>
+            
+            <div class="hero__content">
+                <!-- Hero subtitle -->
+                <div class="hero__subtitle">
+                    <p data-i18n="hero.subtitle">Nunta lui</p>
+                </div>
+                
+                <!-- Groom names -->
+                <div class="hero__names">
+                    <h1 class="hero__groom-1" data-i18n="hero.groom1">Krisztian</h1>
+                    <span class="hero__separator">&</span>
+                    <h1 class="hero__groom-2" data-i18n="hero.groom2">Larisa</h1>
+                </div>
+                
+                <!-- Date and time -->
+                <div class="hero__meta">
+                    <p class="hero__date" data-i18n="hero.date">26 septembrie 2026</p>
+                    <p class="hero__time" data-i18n="hero.time">17:00 / 19:00</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== INTRO & GODPARENTS SECTION ===================== -->
+        <section class="intro" aria-label="Introduction and family information">
+            <div class="intro__container">
+                
+                <!-- Stamp image -->
+                <div class="intro__stamp intro__stamp--top" aria-hidden="true">
+                    <img src="assets/images/stamp.webp" alt="" loading="lazy">
+                </div>
+                
+                <!-- Main text -->
+                <p class="intro__text" data-i18n="intro.text">
+                    Pentru ca cel mai frumos capitol al povestii noastre incepe acum, noi:
+                </p>
+
+                <!-- Parents section -->
+                <div class="intro__family">
+                    <div class="intro__family-group">
+                        <h3 class="intro__family-label" data-i18n="intro.groomsSection">
+                            Cu binecuvantarea celor care ne-au dat viata:
+                        </h3>
+                        <div class="intro__family-names">
+                            <div class="intro__names-column">
+                                <p data-i18n="intro.groomParents">Emeric si Nicoleta Tyukodi</p>
+                            </div>
+                            <div class="intro__names-divider"></div>
+                            <div class="intro__names-column">
+                                <p data-i18n="intro.brideParents">Ioan si Ioana Dragan</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Godparents section -->
+                    <div class="intro__godparents">
+                        <h3 class="intro__godparents-label" data-i18n="intro.godfathersTitle">
+                            Si calauziti cu iubire de nasii nostrii:
+                        </h3>
+                        <div class="intro__godparents-names">
+                            <div class="intro__names-column">
+                                <p data-i18n="intro.godfathers1">Adrian si Adina Kiss</p>
+                            </div>
+                            <div class="intro__names-divider"></div>
+                            <div class="intro__names-column">
+                                <p data-i18n="intro.godfathers2">Andrei si Iulia Jecan</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Closing text -->
+                <p class="intro__closing" data-i18n="intro.closing">
+                    Va invitam cu bucurie la celebrarea casatoriei noastre
+                </p>
+            </div>
+        </section>
+
+        <!-- ===================== CALENDAR & COUNTDOWN SECTION ===================== -->
+        <section class="countdown" aria-label="Event countdown and calendar">
+            <div class="countdown__container">
+                
+                <!-- Countdown timer -->
+                <div class="countdown__timer">
+                    <h2 class="countdown__label" data-i18n="calendar.countdownLabel">
+                        Pana la marele eveniment
+                    </h2>
+                    <div class="countdown__display">
+                        <div class="countdown__unit">
+                            <span class="countdown__value" data-countdown="days">0</span>
+                            <span class="countdown__label-unit" data-i18n="calendar.days">Zile</span>
+                        </div>
+                        <div class="countdown__unit">
+                            <span class="countdown__value" data-countdown="hours">0</span>
+                            <span class="countdown__label-unit" data-i18n="calendar.hours">Ore</span>
+                        </div>
+                        <div class="countdown__unit">
+                            <span class="countdown__value" data-countdown="minutes">0</span>
+                            <span class="countdown__label-unit" data-i18n="calendar.minutes">Minute</span>
+                        </div>
+                        <div class="countdown__unit">
+                            <span class="countdown__value" data-countdown="seconds">0</span>
+                            <span class="countdown__label-unit" data-i18n="calendar.seconds">Secunde</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Center stamp decoration -->
+                <div class="countdown__divider">
+                    <div class="calendar__icon-wrapper">
+                        <img src="assets/icons/stamp.webp" alt="" class="calendar__icon" loading="lazy" aria-hidden="true">
+                    </div>
+                </div>
+
+                <!-- Calendar -->
+                <div class="calendar">
+                    <h3 class="calendar__title">
+                        <span data-i18n="calendar.month">septembrie</span>
+                        <span data-i18n="calendar.year">2026</span>
+                    </h3>
+                    <table class="calendar__table" role="presentation">
+                        <thead>
+                            <tr>
+                                <th>L</th>
+                                <th>Ma</th>
+                                <th>Mi</th>
+                                <th>J</th>
+                                <th>V</th>
+                                <th>S</th>
+                                <th>D</th>
+                            </tr>
+                        </thead>
+                        <tbody id="calendar-body">
+                            <!-- Generated by JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== LOCATIONS SECTION ===================== -->
+        <section class="locations" aria-label="Ceremony and reception locations">
+            <div class="locations__container">
+                
+                <!-- Ceremony location -->
+                <article class="location-card location-card--ceremony">
+                    <div class="location-card__icon-wrapper">
+                        <img src="assets/icons/church.webp" alt="" class="location-card__icon" loading="lazy" aria-hidden="true">
+                    </div>
+                    <h2 class="location-card__title" data-i18n="locations.ceremony">
+                        Ceremonia religioasa
+                    </h2>
+                    <div class="location-card__details">
+                        <p class="location-card__time" data-i18n="locations.ceremonyTime">
+                            Ora 17:00
+                        </p>
+                        <address class="location-card__address">
+                            <p class="location-card__venue" data-i18n="locations.ceremonyLocation">
+                                Biserica Ortodoxa Sfantul Pentru si Pavel
+                            </p>
+                            <p class="location-card__street" data-i18n="locations.ceremonyAddress">
+                                Str. Btiziului 21, Satu Mare
+                            </p>
+                        </address>
+                    </div>
+                    <a href="https://maps.google.com/?q=Biserica+Ortodoxa+Sfantul+Pentru+si+Pavel+Satu+Mare" target="_blank" rel="noopener noreferrer" class="location-card__link" data-i18n="locations.viewLocation">
+                        Vezi locația
+                    </a>
+                </article>
+
+                <!-- Reception location -->
+                <article class="location-card location-card--reception">
+                    <div class="location-card__icon-wrapper">
+                        <img src="assets/icons/disco-ball.webp" alt="" class="location-card__icon" loading="lazy" aria-hidden="true">
+                    </div>
+                    <h2 class="location-card__title" data-i18n="locations.reception">
+                        Receptie
+                    </h2>
+                    <div class="location-card__details">
+                        <p class="location-card__time" data-i18n="locations.receptionTime">
+                            Ora 19:00
+                        </p>
+                        <address class="location-card__address">
+                            <p class="location-card__venue" data-i18n="locations.receptionLocation">
+                                Sala Infinity Ballroom
+                            </p>
+                            <p class="location-card__street" data-i18n="locations.receptionAddress">
+                                DN19F, Martinesti
+                            </p>
+                        </address>
+                    </div>
+                    <a href="https://maps.google.com/?q=Sala+Infinity+Ballroom+Martinesti" target="_blank" rel="noopener noreferrer" class="location-card__link" data-i18n="locations.viewLocation">
+                        Vezi locația
+                    </a>
+                </article>
+            </div>
+        </section>
+
+        <!-- ===================== RSVP FORM SECTION ===================== -->
+        <section class="rsvp" aria-label="RSVP form">
+            <div class="rsvp__container">
+                <h2 class="rsvp__title" data-i18n="rsvp.title">
+                    Confirmare prezență
+                </h2>
+                <p class="rsvp__subtitle" data-i18n="rsvp.subtitle">
+                    Vă rugăm să ne confirmați prezența până în data de 01.09.2026
+                </p>
+
+                <form class="rsvp__form" id="rsvp-form" novalidate>
+                    
+                    <!-- Will you join question -->
+                    <fieldset class="form-fieldset">
+                        <legend class="form-legend" data-i18n="rsvp.joinQuestion">Vei fi prezent?</legend>
+                        <div class="form-radio-group">
+                            <label class="form-radio-label">
+                                <input type="radio" name="join" value="yes" id="join-yes" class="form-radio" required aria-required="true">
+                                <span data-i18n="rsvp.joinYes">Da, voi fi prezent</span>
+                            </label>
+                            <label class="form-radio-label">
+                                <input type="radio" name="join" value="no" id="join-no" class="form-radio">
+                                <span data-i18n="rsvp.joinNo">Nu voi putea participa</span>
+                            </label>
+                        </div>
+                        <span class="form-error" role="alert"></span>
+                    </fieldset>
+
+                    <!-- Guest name -->
+                    <div class="form-group">
+                        <label for="guest-name" class="form-label" data-i18n="rsvp.nameLabel">
+                            Numele tău
+                        </label>
+                        <input
+                            type="text"
+                            id="guest-name"
+                            name="name"
+                            class="form-input"
+                            maxlength="100"
+                            aria-required="true"
+                        >
+                        <span class="form-error" role="alert"></span>
+                    </div>
+
+                    <!-- Partner question (visible if join=yes) -->
+                    <fieldset class="form-fieldset form-fieldset--conditional" id="partner-section" hidden>
+                        <legend class="form-legend" data-i18n="rsvp.partnerQuestion">Vei veni cu partener?</legend>
+                        <div class="form-radio-group">
+                            <label class="form-radio-label">
+                                <input type="radio" name="partner" value="yes" id="partner-yes" class="form-radio">
+                                <span data-i18n="rsvp.partnerYes">Da</span>
+                            </label>
+                            <label class="form-radio-label">
+                                <input type="radio" name="partner" value="no" id="partner-no" class="form-radio">
+                                <span data-i18n="rsvp.partnerNo">Nu</span>
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <!-- Partner name (visible if partner=yes) -->
+                    <div class="form-group form-group--conditional" id="partner-name-section" hidden>
+                        <label for="partner-name" class="form-label" data-i18n="rsvp.partnerNameLabel">
+                            Numele partenerului
+                        </label>
+                        <input
+                            type="text"
+                            id="partner-name"
+                            name="partnerName"
+                            class="form-input"
+                            maxlength="100"
+                        >
+                        <span class="form-error" role="alert"></span>
+                    </div>
+
+                    <!-- Menu selection (visible if join=yes) -->
+                    <div class="form-group form-group--conditional" id="menu-section" hidden>
+                        <label for="menu" class="form-label" data-i18n="rsvp.menuLabel">
+                            Alege meniu
+                        </label>
+                        <select id="menu" name="menu" class="form-select">
+                            <option value="">-- Selectează --</option>
+                            <option value="standard" data-i18n="rsvp.menuStandard">Standard</option>
+                            <option value="vegan" data-i18n="rsvp.menuVegan">Vegan</option>
+                        </select>
+                        <span class="form-error" role="alert"></span>
+                    </div>
+
+                    <!-- Dietary restrictions (visible if join=yes) -->
+                    <div class="form-group form-group--conditional" id="dietary-section" hidden>
+                        <label for="dietary" class="form-label">
+                            <span data-i18n="rsvp.dietaryLabel">Restricții alimentare</span>
+                            <span class="form-note" data-i18n="rsvp.dietaryNote">(Opțional)</span>
+                        </label>
+                        <textarea
+                            id="dietary"
+                            name="dietary"
+                            class="form-textarea"
+                            rows="2"
+                            maxlength="500"
+                        ></textarea>
+                    </div>
+
+                    <!-- Partner menu (visible if partner=yes) -->
+                    <div class="form-group form-group--conditional" id="partner-menu-section" hidden>
+                        <label for="partner-menu" class="form-label" data-i18n="rsvp.partnerMenuLabel">
+                            Meniu partener
+                        </label>
+                        <select id="partner-menu" name="partnerMenu" class="form-select">
+                            <option value="">-- Selectează --</option>
+                            <option value="standard" data-i18n="rsvp.menuStandard">Standard</option>
+                            <option value="vegan" data-i18n="rsvp.menuVegan">Vegan</option>
+                        </select>
+                        <span class="form-error" role="alert"></span>
+                    </div>
+
+                    <!-- Partner dietary (visible if partner=yes) -->
+                    <div class="form-group form-group--conditional" id="partner-dietary-section" hidden>
+                        <label for="partner-dietary" class="form-label">
+                            <span data-i18n="rsvp.partnerDietaryLabel">Restricții alimentare partener</span>
+                            <span class="form-note" data-i18n="rsvp.dietaryNote">(Opțional)</span>
+                        </label>
+                        <textarea
+                            id="partner-dietary"
+                            name="partnerDietary"
+                            class="form-textarea"
+                            rows="2"
+                            maxlength="500"
+                        ></textarea>
+                    </div>
+
+                    <!-- Children question (visible if join=yes) -->
+                    <fieldset class="form-fieldset form-fieldset--conditional" id="children-section" hidden>
+                        <legend class="form-legend" data-i18n="rsvp.childrenQuestion">Vei veni cu copii?</legend>
+                        <div class="form-radio-group">
+                            <label class="form-radio-label">
+                                <input type="radio" name="children" value="yes" id="children-yes" class="form-radio">
+                                <span data-i18n="rsvp.childrenYes">Da</span>
+                            </label>
+                            <label class="form-radio-label">
+                                <input type="radio" name="children" value="no" id="children-no" class="form-radio">
+                                <span data-i18n="rsvp.childrenNo">Nu</span>
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <!-- Children count (visible if children=yes) -->
+                    <div class="form-group form-group--conditional" id="children-count-section" hidden>
+                        <label for="children-count" class="form-label" data-i18n="rsvp.childrenCountLabel">
+                            Câți copii?
+                        </label>
+                        <input
+                            type="number"
+                            id="children-count"
+                            name="childrenCount"
+                            class="form-input"
+                            min="1"
+                            max="10"
+                        >
+                        <span class="form-error" role="alert"></span>
+                    </div>
+
+                    <!-- Child menus container (visible if children-count >= 1) -->
+                    <div id="child-menus-container"></div>
+
+                    <!-- Message for grooms (always visible) -->
+                    <div class="form-group">
+                        <label for="message" class="form-label">
+                            <span data-i18n="rsvp.messageLabel">Mesaj pentru miri</span>
+                            <span class="form-note" data-i18n="rsvp.messageNote">(Opțional - maxim 500 caractere)</span>
+                        </label>
+                        <textarea
+                            id="message"
+                            name="message"
+                            class="form-textarea"
+                            rows="3"
+                            maxlength="500"
+                        ></textarea>
+                    </div>
+
+                    <!-- Submit button -->
+                    <button type="submit" class="btn-submit" data-i18n="rsvp.submitButton">
+                        TRIMITE RĂSPUNS
+                    </button>
+
+                    <!-- Success message -->
+                    <div class="form-success" role="alert" style="display: none;">
+                        <p data-i18n="rsvp.successMessage">
+                            Mulțumim pentru răspuns!
+                        </p>
+                    </div>
+                </form>
+
+                <!-- Contact section -->
+                <div class="rsvp__contact">
+                    <p class="rsvp__contact-label" data-i18n="footer.contactTitle">Contact</p>
+                    <div class="rsvp__contact-info">
+                        <p>
+                            <strong data-i18n="footer.krisztian">Krisztian</strong>
+                            <a href="tel:+40756519111">+40 756 519 111</a>
+                        </p>
+                        <p>
+                            <strong data-i18n="footer.larisa">Larisa</strong>
+                            <a href="tel:+40756613554">+40 756 613 554</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="footer">
+        <p class="footer__text" data-i18n="footer.thanks">
+            Cu drag, Krisztian & Larisa
+        </p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="src/main.js"></script>
+</body>
+</html>
