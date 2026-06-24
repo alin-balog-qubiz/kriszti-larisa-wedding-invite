@@ -213,12 +213,18 @@ function startCountdown() {
 
 // ===================== FORM SYSTEM =====================
 
+const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzH_kObi7gaoVSyTT2Q7V1IqORQl7D8gzYpywYD_e-eeB1AzmNcbITvAaYU61n_39PU/exec';
+let formLoadedAt = Date.now();
+
 /**
  * Setup RSVP form with conditional visibility and validation
  */
 function setupRSVPForm() {
     const form = document.getElementById('rsvp-form');
     if (!form) return;
+
+    // Record when form was loaded (anti-spam timing check)
+    formLoadedAt = Date.now();
     
     // Radio buttons for conditional logic
     const joinRadios = form.querySelectorAll('input[name="join"]');
@@ -292,17 +298,28 @@ function setupRSVPForm() {
     }
     
     // Form submission
-    form.addEventListener('submit', (e) => {
+    form.addEventListener('submit', async (e) => {
         e.preventDefault();
         
         if (!validateCompleteForm(form)) {
             return;
         }
         
-        const payload = buildFormPayload(form);
-        console.log(payload);
+        const submitBtn = form.querySelector('.btn-submit');
+        submitBtn.disabled = true;
+        submitBtn.style.opacity = '0.6';
         
-        showFormSuccess(form);
+        const payload = buildFormPayload(form);
+        
+        try {
+            await submitToSheet(payload);
+            showFormSuccess(form);
+        } catch (err) {
+            console.error('Submission failed:', err);
+            submitBtn.disabled = false;
+            submitBtn.style.opacity = '1';
+            showFormError(form);
+        }
     });
 }
 
@@ -566,6 +583,31 @@ function getTranslation(key) {
 }
 
 /**
+ * Submit form data to Google Sheets via Apps Script
+ */
+async function submitToSheet(payload) {
+    // Add anti-spam fields
+    payload._loadedAt = new Date(formLoadedAt).toISOString();
+    payload.lang = currentLang;
+    
+    // Honeypot value
+    const hpField = document.querySelector('input[name="_hp"]');
+    if (hpField?.value) {
+        payload._hp = hpField.value;
+    }
+    
+    await fetch(APPS_SCRIPT_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'text/plain' },
+        body: JSON.stringify(payload)
+    });
+    
+    // no-cors returns opaque response, so we can't read status
+    // but if fetch didn't throw, the request was sent
+}
+
+/**
  * Show form success message
  */
 function showFormSuccess(form) {
@@ -573,6 +615,21 @@ function showFormSuccess(form) {
     if (successEl) {
         successEl.style.display = 'block';
     }
+}
+
+/**
+ * Show form error message
+ */
+function showFormError(form) {
+    let errorEl = form.querySelector('.form-submit-error');
+    if (!errorEl) {
+        errorEl = document.createElement('div');
+        errorEl.className = 'form-submit-error';
+        errorEl.role = 'alert';
+        errorEl.style.cssText = 'color:#c0392b;text-align:center;margin-top:1rem;';
+        form.querySelector('.btn-submit').after(errorEl);
+    }
+    errorEl.textContent = getTranslation('rsvp.errorMessage') || 'A apărut o eroare. Vă rugăm încercați din nou.';
 }
 
 // ===================== INITIALIZATION =====================
