@@ -2,17 +2,17 @@
   "ro": {
     "hero": {
       "subtitle": "The wedding of",
-      "groom1": "Krisztian",
+      "groom1": "Krisztián",
       "groom2": "Larisa",
       "date": "26 septembrie 2026",
       "time": "17:00 / 19:00"
     },
     "intro": {
-      "text": "Pentru ca cel mai frumos capitol al povestii noastre Începe acum, noi:",
+      "text": "Pentru că cel mai frumos capitol al poveștii noastre începe acum, noi:",
       "groomsSection": "Cu binecuvântarea celor care ne-au dat viață:",
       "groomParents": "Emeric și Nicoleta Tyukodi",
       "brideParents": "Ioan și Ioana Dragan",
-      "godfathersTitle": "Și călăuziți cu iubire de nașii nostrii:",
+      "godfathersTitle": "Și călăuziți cu iubire de nașii noștri:",
       "godfathers1": "Adrian și Adina Kiss",
       "godfathers2": "Andrei și Iulia Jecan",
       "closing": "Vă invităm cu bucurie la celebrarea căsătoriei noastre"
@@ -31,7 +31,7 @@
       "ceremonyTime": "Ora 17:00",
       "ceremonyLocation": "Biserica Ortodoxă Sfântul Pentru și Pavel",
       "ceremonyAddress": "Str. Btiziului 21, Satu Mare",
-      "reception": "Recepție",
+      "reception": "Petrecerea",
       "receptionTime": "Ora 19:00",
       "receptionLocation": "Sala Infinity Ballroom",
       "receptionAddress": "DN19F, Martinesti",
@@ -77,34 +77,34 @@
     },
     "footer": {
       "contactTitle": "Contact",
-      "krisztian": "Krisztian",
+      "krisztian": "Krisztián",
       "larisa": "Larisa",
       "phone": "Telefon",
-      "thanks": "Cu drag, Krisztian & Larisa"
+      "thanks": "Cu drag, Krisztián & Larisa"
     }
   },
   "hu": {
     "hero": {
       "subtitle": "The wedding of",
-      "groom1": "Krisztian",
+      "groom1": "Krisztián",
       "groom2": "Larisa",
       "date": "2026. szeptember 26.",
       "time": "17:00 / 19:00"
     },
     "intro": {
-      "text": "Mivel életünk legszebb fejezete most kezdődik, mi meghívjuk Önöket:",
+      "text": "Mert a történetünk legszebb fejezete most kezdődik, mi:",
       "groomsSection": "Szüleink áldásával:",
       "groomParents": "Emeric és Nicoleta Tyukodi",
       "brideParents": "Ioan és Ioana Dragan",
-      "godfathersTitle": "Szeretett keresztszüleink vezetésével:",
+      "godfathersTitle": "És szeretettel kísérnek esküvői tanúink:",
       "godfathers1": "Adrian és Adina Kiss",
       "godfathers2": "Andrei és Iulia Jecan",
-      "closing": "Szeretettel hívjuk házasságunk megtartására"
+      "closing": "Örömmel meghívjuk Önöket esküvőnk ünnepi megünneplésére"
     },
     "calendar": {
       "month": "szeptember",
       "year": "2026",
-      "countdownLabel": "A nagy nap",
+      "countdownLabel": "A nagy napig",
       "days": "Nap",
       "hours": "Óra",
       "minutes": "Perc",
@@ -113,37 +113,37 @@
     "locations": {
       "ceremony": "Szertartás",
       "ceremonyTime": "17:00",
-      "ceremonyLocation": "Satu Mare Ortodox Egyház",
+      "ceremonyLocation": "Szent Péter és Pál Ortodox Templom",
       "ceremonyAddress": "Btiziului u. 21, Satu Mare",
-      "reception": "Fogadás",
+      "reception": "Ünnepség",
       "receptionTime": "19:00",
       "receptionLocation": "Infinity Ballroom",
       "receptionAddress": "DN19F, Martinesti",
-      "viewLocation": "Megtekintés a térképen"
+      "viewLocation": "Helyszín megtekintése"
     },
     "rsvp": {
-      "title": "RSVP",
-      "subtitle": "Kérjük, erősítse meg jelenlétét 2026. szeptember 1-ig",
+      "title": "Részvételi visszajelzés",
+      "subtitle": "Kérjük, hogy részvételüket 2026. szeptember 1-ig jelezzék",
       "joinQuestion": "Meg fogsz jelenni?",
       "joinYes": "Igen, jelen leszek",
-      "joinNo": "Sajnos nem tudom",
-      "nameLabel": "Neved",
+      "joinNo": "Sajnos nem tudok részt venni",
+      "nameLabel": "Az Ön neve",
       "nameError": "Kérjük, add meg az érvényes nevet",
-      "partnerQuestion": "Jössz partnerrel?",
+      "partnerQuestion": "A partnerével érkezik?",
       "partnerYes": "Igen",
       "partnerNo": "Nem",
       "partnerNameLabel": "Partner neve",
       "partnerNameError": "Kérjük, add meg az érvényes nevet",
-      "menuLabel": "Válassz étrendet",
+      "menuLabel": "Menü választása:",
       "menuStandard": "Standard",
       "menuVegan": "Vegán",
       "menuError": "Kérjük, válassz étrendet",
-      "dietaryLabel": "Diétás megkötések",
+      "dietaryLabel": "Ételallergiák és ételérzékenységek",
       "dietaryNote": "(Opcionális)",
       "partnerMenuLabel": "Partner étrendje",
       "partnerMenuError": "Kérjük, válassz étrendet a partnernek",
       "partnerDietaryLabel": "Partner diétás megkötése",
-      "childrenQuestion": "Jössz gyerekekkel?",
+      "childrenQuestion": "Gyermekekkel érkezel?",
       "childrenYes": "Igen",
       "childrenNo": "Nem",
       "childrenCountLabel": "Hány gyerek?",
@@ -153,18 +153,18 @@
       "childMenuAdult": "Felnőtt menü",
       "childMenuNoMenu": "Nincs menü",
       "childMenuError": "Kérjük, válassz étrendet",
-      "messageLabel": "Üzenet a menyasszonynak és vőlegénynek",
+      "messageLabel": "Üzenet az ifjú párnak",
       "messageNote": "(Opcionális - max 500 karakter)",
       "submitButton": "VÁLASZ KÜLDÉSE",
       "successMessage": "Köszönjük a választ! Megkaptuk a megerősítésedet.",
       "requiredField": "Kötelező mező"
     },
     "footer": {
-      "contactTitle": "Kapcsolat",
-      "krisztian": "Krisztian",
+      "contactTitle": "Elérhetőség",
+      "krisztian": "Krisztián",
       "larisa": "Larisa",
       "phone": "Telefon",
-      "thanks": "Szeretettel, Krisztian & Larisa"
+      "thanks": "Szeretettel, Krisztián & Larisa"
     }
   }
 }
