@@ -818,7 +818,6 @@ body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    animation: fadeInScale 0.6s ease-out;
 }
 
 .rsvp__subtitle {
@@ -1250,6 +1249,99 @@ body {
     
     .countdown__value {
         font-size: 1.875rem;
+    }
+}
+
+/* ===================== ANIMATIONS ===================== */
+
+/* Easing tokens */
+:root {
+    --ease-enter: cubic-bezier(0.22, 1, 0.36, 1);
+    --ease-move: cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* --- Hero entrance --- */
+.hero__subtitle,
+.hero__names,
+.hero__meta {
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity 0.9s var(--ease-enter), transform 0.9s var(--ease-enter);
+}
+
+.hero--ready .hero__subtitle {
+    opacity: 0.95;
+    transform: translateY(0);
+    transition-delay: 200ms;
+}
+
+.hero--ready .hero__names {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 520ms;
+}
+
+.hero--ready .hero__meta {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 840ms;
+}
+
+/* --- Scroll reveal --- */
+.reveal {
+    opacity: 0;
+    transform: translateY(22px);
+    transition: opacity 0.7s var(--ease-enter), transform 0.7s var(--ease-enter);
+}
+
+.reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.reveal--d1 { transition-delay: 80ms; }
+.reveal--d2 { transition-delay: 160ms; }
+.reveal--d3 { transition-delay: 240ms; }
+.reveal--d4 { transition-delay: 320ms; }
+
+/* --- Countdown value pulse --- */
+@keyframes countdownPulse {
+    0%   { opacity: 1; }
+    30%  { opacity: 0.4; }
+    100% { opacity: 1; }
+}
+
+.countdown__value--pulse {
+    animation: countdownPulse 0.3s ease;
+}
+
+/* --- Stamp float --- */
+@keyframes stampFloat {
+    0%, 100% { transform: translateY(0); }
+    50%       { transform: translateY(-8px); }
+}
+
+.intro__stamp.is-floating img {
+    animation: stampFloat 4s ease-in-out infinite;
+}
+
+/* --- Reduced motion --- */
+@media (prefers-reduced-motion: reduce) {
+    .hero__subtitle,
+    .hero__names,
+    .hero__meta,
+    .reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+
+    .intro__stamp.is-floating img {
+        animation: none;
+    }
+
+    .countdown__value--pulse {
+        animation: none;
     }
 }
 

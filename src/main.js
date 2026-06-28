@@ -185,7 +185,10 @@ function updateCountdown() {
     if (countdownDisplay.days) countdownDisplay.days.textContent = String(days).padStart(2, '0');
     if (countdownDisplay.hours) countdownDisplay.hours.textContent = String(hours).padStart(2, '0');
     if (countdownDisplay.minutes) countdownDisplay.minutes.textContent = String(minutes).padStart(2, '0');
-    if (countdownDisplay.seconds) countdownDisplay.seconds.textContent = String(seconds).padStart(2, '0');
+    if (countdownDisplay.seconds) {
+        countdownDisplay.seconds.textContent = String(seconds).padStart(2, '0');
+        pulseCountdownValue(countdownDisplay.seconds, 'seconds');
+    }
 }
 
 /**
@@ -632,6 +635,64 @@ function showFormError(form) {
     errorEl.textContent = getTranslation('rsvp.errorMessage') || 'A apărut o eroare. Vă rugăm încercați din nou.';
 }
 
+// ===================== ANIMATIONS =====================
+
+/**
+ * Hero entrance: fade-rise subtitle → names → meta in sequence
+ */
+function setupHeroEntrance() {
+    const hero = document.querySelector('.hero');
+    if (!hero) return;
+    // Double rAF ensures the browser has painted the initial opacity:0 state
+    requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+            hero.classList.add('hero--ready');
+        });
+    });
+}
+
+/**
+ * Scroll reveal: fade-up elements as they enter the viewport (once)
+ */
+function setupScrollReveal() {
+    const els = document.querySelectorAll('.reveal');
+    if (!els.length) return;
+
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+                entry.target.classList.add('is-visible');
+                if (entry.target.classList.contains('intro__stamp')) {
+                    setTimeout(() => entry.target.classList.add('is-floating'), 500);
+                }
+                observer.unobserve(entry.target);
+            });
+        },
+        { threshold: 0.12, rootMargin: '0px 0px -30px 0px' }
+    );
+
+    els.forEach(el => observer.observe(el));
+}
+
+/**
+ * Countdown pulse: brief opacity breath when the seconds value changes
+ */
+const _prevCountdownValues = {};
+
+function pulseCountdownValue(el, key) {
+    const val = el.textContent;
+    if (_prevCountdownValues[key] !== undefined && _prevCountdownValues[key] !== val) {
+        el.classList.remove('countdown__value--pulse');
+        void el.offsetWidth; // reflow to restart animation
+        el.classList.add('countdown__value--pulse');
+        el.addEventListener('animationend', () => {
+            el.classList.remove('countdown__value--pulse');
+        }, { once: true });
+    }
+    _prevCountdownValues[key] = val;
+}
+
 // ===================== INITIALIZATION =====================
 
 /**
@@ -643,6 +704,8 @@ async function initializeApp() {
     generateCalendar();
     startCountdown();
     setupRSVPForm();
+    setupHeroEntrance();
+    setupScrollReveal();
 }
 
 // Start when DOM is fully loaded
